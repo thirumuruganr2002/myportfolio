@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Reset & Full-Screen Layout */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .timeline-container {
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: yellow;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 45%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+            transform-origin: right;
+        }
+
+        .timeline-item.right {
+            left: 55%;
+            text-align: left;
+            bottom: 67px;
+            transform-origin: left;
+        }
+
+        /* Timeline Icon */
+        .timeline-icon {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background: yellow;
+            color: #007bff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .left .timeline-icon {
+            left: calc(100% + 15px);
+        }
+
+        .right .timeline-icon {
+            right: calc(100% + 15px);
+        }
+
+        .timeline-item h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h4 {
+            font-size: 16px;
+            color: yellow;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+        }
+
+        .timeline-item ul li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            list-style-type: none;
+        }
+
+        .timeline-item ul li::before {
+            content: '✔';
+            color: yellow;
+            margin-right: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                text-align: left;
+                padding-left: 40px;
+                left: 0;
+            }
+
+            .timeline-item.left, .timeline-item.right {
+                left: 0;
+                text-align: left;
+            }
+
+            .timeline-icon {
+                left: 0px;
+                top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="timeline-container">
+    <h2 class="section-title">💼 Work Experience</h2>
+    
+    <div class="timeline">
+        <!-- GramoSoft Experience -->
+        <div class="timeline-item left">
+            <div class="timeline-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Angular Developer</h3>
+            <h4>GRAMOSOFT Pvt Ltd | Aug 2022 – Present</h4>
+            <ul>
+                <li>Developed & maintained web applications using Angular, HTML, CSS, Bootstrap.</li>
+                <li>Integrated and optimized RESTful APIs for seamless backend communication.</li>
+                <li>Collaborated with designers to enhance UI/UX for better user engagement.</li>
+                <li>Implemented GitLab version control and CI/CD pipelines for deployment efficiency.</li>
+                <li>Conducted code reviews and mentored junior developers.</li>
+            </ul>
+        </div>
+
+        <!-- Naina Tech Solution Experience -->
+        <div class="timeline-item right">
+            <div class="timeline-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>Front-End Developer</h3>
+            <h4>Naina Tech Solution | Aug 2021 – Aug 2022</h4>
+            <ul>
+                <li>Built interactive front-end apps using Angular & Bootstrap.</li>
+                <li>Fixed critical bugs, improving application stability.</li>
+                <li>Worked closely with clients to translate business needs into UI solutions.</li>
+                <li>Handled API integrations for seamless data flow.</li>
+                <li>Optimized front-end performance, reducing load time.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
